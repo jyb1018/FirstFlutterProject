@@ -1,181 +1,248 @@
 import 'dart:io';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
 }
+//
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     // google style widget 제공, Custom UI
+//     return MaterialApp(
+//       // 글자 위젯
+//       // home: Text("안녕")
+//
+//       // 아이콘 위젯
+//       // home: Icon(Icons.shop)
+//
+//       // 이미지 경로
+//       // home: Image.asset('assets/img0.jpeg')
+//
+//       // 박스
+//       // home: Container(
+//       //   // 단위는 LP
+//       //   width: 50,
+//       //   height: 50,
+//       //   color: Colors.blue,
+//       // )
+//
+//       // home: Center(
+//       //   child: Container(
+//       //     // 단위는 LP
+//       //     width: 50,
+//       //     height: 50,
+//       //     color: Colors.blue,
+//       //   )
+//       // )
+//
+//       home: Scaffold(
+//         // 상단 레이아웃
+//         appBar: AppBar(
+//           backgroundColor: Colors.white,
+//
+//           actions: const [
+//             Icon(Icons.search, color: Colors.black, size: 40,),
+//             Icon(Icons.menu, color: Colors.black, size: 40,),
+//             Icon(Icons.notifications, color: Colors.black, size: 40,),
+//           ],
+//           title: Container(
+//
+//
+//             child: Row(
+//               children: const [
+//                 Text('역삼동',
+//                  style: TextStyle(
+//                    fontSize: 20,
+//                    fontFamily: 'Consola',
+//                    color: Colors.black,
+//                  ),
+//                 ),
+//                 Icon(Icons.arrow_drop_down, color: Colors.black,)
+//               ],
+//             ),
+//             margin: EdgeInsets.fromLTRB(5, 0, 0, 0),
+//           ),
+//         ),
+//
+//         // 중단 레이아웃
+//         body: Column(
+//           children: [
+//             Container(
+//               width: double.infinity,
+//               height: 200,
+//               padding: EdgeInsets.all(10),
+//               decoration: BoxDecoration(
+//                 border: Border.all()
+//               ),
+//               child: Row(
+//                 children: [
+//                   Container(
+//                     child: Image.asset('assets/img0.jpeg'),
+//                     margin: EdgeInsets.fromLTRB(0, 0, 20, 0),
+//
+//                   ),
+//                   SizedBox(
+//                     width: 400,
+//                     child: Column(
+//
+//                       children: [
+//                         Text('상품 제목',
+//                           style: TextStyle(
+//                             fontSize: 20,
+//                             fontWeight: FontWeight.bold
+//                           ),
+//                           textAlign: TextAlign.left,
+//                         ),
+//                         Text('위치 - 개시 일자',
+//                           style: TextStyle(
+//                               fontSize: 10,
+//                           ),
+//                           textAlign: TextAlign.left,
+//                         ),
+//                         Text('가격',
+//                           style: TextStyle(
+//                               fontSize: 15,
+//                               fontWeight: FontWeight.normal
+//                           ),
+//                           textAlign: TextAlign.left,
+//                         ),
+//
+//                         Row(
+//                           mainAxisAlignment: MainAxisAlignment.end,
+//                             children: const [
+//                               Icon(Icons.favorite),
+//                               Text('0'),
+//                             ],
+//                           ),
+//
+//                       ],
+//                     ),
+//                   )
+//                 ],
+//               ),
+//             )
+//           ],
+//         ),
+//
+//         // body: Column(
+//         //   children: [
+//         //     Align(
+//         //       alignment: Alignment.bottomCenter,
+//         //       child: Container(
+//         //         width: double.infinity,
+//         //         height: 50,
+//         //         // margin: EdgeInsets.fromLTRB(20, 20, 0, 0),
+//         //         // padding: EdgeInsets.all(20),
+//         //         decoration: BoxDecoration(
+//         //           color: Colors.blueGrey,
+//         //           border: Border.all(color: Colors.black),
+//         //         ),
+//         //
+//         //         child: Align(
+//         //             alignment: Alignment.center,
+//         //             child: Text('글')
+//         //         ),
+//         //       ),
+//         //     ),
+//         //     Text('안녕하세요',
+//         //       style: TextStyle(
+//         //         color: Color(0xff51a08a),
+//         //         fontSize: 100,
+//         //       ),
+//         //     ),
+//         //
+//         //
+//         //   ],
+//         // ),
+//
+//         // 하단 레이아웃
+//         bottomNavigationBar: BottomAppBar(
+//             child:
+//             SizedBox(
+//               height: 50,
+//               child: Row(
+//                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                 children: const [Icon(Icons.phone), Icon(Icons.message), Icon(Icons.contact_page)],
+//               ),
+//             )
+//         ),
+//       )
+//
+//
+//     );
+//
+//     // IOS style widget 제공
+//     // return CupertinoApp();
+//   }
+// }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // google style widget 제공, Custom UI
     return MaterialApp(
-      // 글자 위젯
-      // home: Text("안녕")
-
-      // 아이콘 위젯
-      // home: Icon(Icons.shop)
-      
-      // 이미지 경로
-      // home: Image.asset('assets/img0.jpeg')
-
-      // 박스
-      // home: Container(
-      //   // 단위는 LP
-      //   width: 50,
-      //   height: 50,
-      //   color: Colors.blue,
-      // )
-
-      // home: Center(
-      //   child: Container(
-      //     // 단위는 LP
-      //     width: 50,
-      //     height: 50,
-      //     color: Colors.blue,
-      //   )
-      // )
-
       home: Scaffold(
-        // 상단 레이아웃
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-
-          actions: const [
-            Icon(Icons.search, color: Colors.black, size: 40,),
-            Icon(Icons.menu, color: Colors.black, size: 40,),
-            Icon(Icons.notifications, color: Colors.black, size: 40,),
-          ],
-          title: Container(
-
-
-            child: Row(
-              children: const [
-                Text('역삼동',
-                 style: TextStyle(
-                   fontSize: 20,
-                   fontFamily: 'Consola',
-                   color: Colors.black,
-                 ),
-                ),
-                Icon(Icons.arrow_drop_down, color: Colors.black,)
-              ],
-            ),
-            margin: EdgeInsets.fromLTRB(5, 0, 0, 0),
-          ),
-        ),
-
-        // 중단 레이아웃
-        body: Column(
-          children: [
-            Container(
-              width: double.infinity,
-              height: 200,
-              padding: EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                border: Border.all()
-              ),
-              child: Row(
-                children: [
-                  Container(
-                    child: Image.asset('assets/img0.jpeg'),
-                    margin: EdgeInsets.fromLTRB(0, 0, 20, 0),
-
-                  ),
-                  Column(
-                    children: [
-                      Text('상품 제목',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                      Text('위치 - 개시 일자',
-                        style: TextStyle(
-                            fontSize: 10,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                      Text('가격',
-                        style: TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                      Align(
-                        alignment: Alignment.centerRight,
-                        child: Row(
-                          children: const [
-                            Icon(Icons.star),
-                            Text('0'),
-                          ],
-                        ),
-                      )
-                    ],
-                  )
-                ],
-              ),
-            )
+        appBar: AppBar(),
+        body: ListView(
+          children: const [
+            Profile(),
+            Profile(),
+            Profile(),
           ],
         ),
+        bottomNavigationBar: CustomBottomAppBar(),
 
-        // body: Column(
-        //   children: [
-        //     Align(
-        //       alignment: Alignment.bottomCenter,
-        //       child: Container(
-        //         width: double.infinity,
-        //         height: 50,
-        //         // margin: EdgeInsets.fromLTRB(20, 20, 0, 0),
-        //         // padding: EdgeInsets.all(20),
-        //         decoration: BoxDecoration(
-        //           color: Colors.blueGrey,
-        //           border: Border.all(color: Colors.black),
-        //         ),
-        //
-        //         child: Align(
-        //             alignment: Alignment.center,
-        //             child: Text('글')
-        //         ),
-        //       ),
-        //     ),
-        //     Text('안녕하세요',
-        //       style: TextStyle(
-        //         color: Color(0xff51a08a),
-        //         fontSize: 100,
-        //       ),
-        //     ),
-        //
-        //
-        //   ],
-        // ),
-
-        // 하단 레이아웃
-        bottomNavigationBar: BottomAppBar(
-            child:
-            SizedBox(
-              height: 50,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [Icon(Icons.phone), Icon(Icons.message), Icon(Icons.contact_page)],
-              ),
-            )
-        ),
       )
-
-
     );
-
-    // IOS style widget 제공
-    // return CupertinoApp();
   }
 }
+
+class Profile extends StatelessWidget {
+  const Profile({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.all(10),
+      height: 100,
+      child: Row(
+        children: const [
+          Icon(Icons.account_circle_rounded, size: 100,),
+          Text('홍길동'),
+        ],
+      ),
+    );
+  }
+}
+
+class CustomBottomAppBar extends StatelessWidget {
+  const CustomBottomAppBar({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return BottomAppBar(
+      child: SizedBox(
+        height: 100,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: const [
+            Icon(Icons.phone, size: 50,),
+            Icon(Icons.textsms, size: 50),
+            Icon(Icons.account_box, size: 50),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+
 
 
 //
